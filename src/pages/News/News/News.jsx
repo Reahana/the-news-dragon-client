@@ -16,7 +16,7 @@ const {_id,title, details, image_url, category_id}= news;
                         <Card.Text>
                         {details}
                         </Card.Text>
-                        <Link to={`/category/${category_id}`}>
+                        <Link to={`/categories/${category_id}`}>
                             <Button variant="danger"><FaArrowLeft /> All news in this category</Button></Link>
                     </Card.Body>
                 </Card>

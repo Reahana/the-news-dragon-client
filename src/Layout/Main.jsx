@@ -7,12 +7,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import LeftNav from '../pages/Shared/LeftNav/LeftNav';
 import RightNav from '../pages/Shared/RightNav/RightNav';
+import Menu from '../pages/Shared/Menu/Menu';
 
 const Main = () => {
     return (
         <div>
         <Header></Header>
-
+        <Menu></Menu>
         <Container>
             <Row>
                 <Col lg={3}>
