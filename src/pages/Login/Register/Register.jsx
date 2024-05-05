@@ -25,6 +25,9 @@ const Register = () => {
                 console.log(error);
             })
     }
+    const handleAccepted = event =>{
+        setAccepted(event.target.checked)
+    }
 
     return (
         <Container className='w-25 mx-auto'>
@@ -49,9 +52,13 @@ const Register = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" name="accept" label="Accept Terms and Conditions" />
+                <Form.Check 
+                 onClick={handleAccepted}
+                type="checkbox"
+                 name="accept"
+                 label={<>Accept <Link to="/terms">Terms and Conditions</Link> </>} />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" disabled={!accepted}  type="submit">
                 Register
             </Button>
             <br />
