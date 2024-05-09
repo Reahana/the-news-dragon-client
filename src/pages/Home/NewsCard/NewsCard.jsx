@@ -7,8 +7,10 @@ import { FaRegBookmark,FaShareNodes,FaEye,FaRegStar,FaStar  } from "react-icons/
 import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
+import useTitle from '../../../hooks/useTitle';
 
 const NewsCard = ({news}) => {
+    useTitle('Home')
      const {_id, title, details,image_url, author,total_view,
         rating,}= news
     return (
